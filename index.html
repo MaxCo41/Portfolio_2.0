@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Portfolio - Maxime COLLIN - Web Developer</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="animate.min.css">
+		<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+	
+	<script>
+	function flipAvatar(){
+			$(".avatar").addClass('avatarFlip');
+			$("#word").removeClass('hidden');
+		}
+	function flip(){
+		$("#main").css('transform', 'rotateY(180deg)');
+	}
+	function returnAvatar(){
+		$(".avatar").removeClass('avatarFlip');
+		$("#word").addClass('hidden');
+	 }
+	</script>
+	</head>
+
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main">
+						<header>
+							<h1>Maxime COLLIN</h1>
+							<span class="avatar" onmouseover="flipAvatar()"><img src="images/photo_CV.jpg" alt="Photo de profil" /></span>
+							<div id="word" class="hidden" onmouseout="returnAvatar()">
+								<ul>
+									<li>Autodidacte</li>
+									<li>Passionnate</li>
+									<li>Ambitious</li>
+								</ul>
+							</div>
+							<p>Web Developer Junior</p>
+						</header>
+						
+						<footer>
+							<ul class="icons">
+								<li><a href="#" class="icon brands fa-linkedin">Linkedin</a></li>
+								<li><a href="#" class="icon brands fa-twitter">Twitter</a></li>
+								<li><a href="#" class="icon brands fa-facebook-f">Facebook</a></li>
+								<li><a href="#" class="icon brands fa-instagram">Instagram</a></li>
+							</ul>
+							<p><a href="mailto:maxime.collin41@gmail.com">maxime.collin41@gmail.com</a></p>
+							<p><a href="tel:+32492946660">+32 492/94.66.60</a></p>
+						</footer>
+						<button id="magicButton">See more...</button>
+						
+					</section>
+						
+					<div id="skills" class="hidden">
+						<h1>SKILLS</h1>
+						<ul>
+							<li>Microsoft Office</li>
+							<li>HTML5</li>
+							<li>Boostraps</li>
+							<li>CSS3</li>
+							<li>Sass</li>	
+							<li>Javascript</li>
+							<li>Jquery</li>
+							<li>AngularJS</li>
+							<li>PHP</li>
+							<li>PHP MyAdmin</li>
+							<li>MongoDB</li>
+							<li>Node.JS</li>
+							<li>MétéoreJS</li>
+						</ul>
+						<h1>WORK</h1>
+						<a href="https://www.nicodovan.com/" target="_blank">www.nicodovan.com</a>
+						<br>
+						<br>	
+						<p><button id="returnButton">Return</button></p>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="copyright">
+							<li>Made with love and passion by <a href="https://github.com/MaxCo41">MaxCo41</a> </li>
+						</ul>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script>
+				if ('addEventListener' in window) {
+					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-preload\b/, ''); });
+					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+				}
+			</script>
+			<script>
+				$(document).ready(function(){
+          		$("#magicButton").click(function(){
+				$("#skills").removeClass('hidden');
+				$('#main').addClass('hidden');
+					 });
+        		});
+			</script>
+			<script>
+				$(document).ready(function(){
+          		$("#returnButton").click(function(){
+				$("#skills").addClass('hidden');
+				$('#main').removeClass('hidden');
+					 });
+        		});
+			</script>	
+	</body>
+
